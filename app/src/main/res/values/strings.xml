@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">中交四航一公司特种设备安全监控平台</string>
+
+    <string name="tips">提示：</string>
+    <string name="notice">警告：</string>
+    <string name="notice_permission_content">该应用需要相应权限才能正常工作, 请前往【设置】开启相应权限</string>
+    <string name="go_now">现在去</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+</resources>
