@@ -1,4 +1,4 @@
-package com.jx_linkcreate.zj4h;
+package com.jx_linkcreate.webapp;
 
 import android.Manifest;
 import android.annotation.TargetApi;

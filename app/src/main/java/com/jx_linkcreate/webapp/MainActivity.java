@@ -1,10 +1,8 @@
-package com.jx_linkcreate.zj4h;
+package com.jx_linkcreate.webapp;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
-import android.view.View;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
@@ -37,35 +35,39 @@ public class MainActivity extends CheckPermissionsActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                Log.d("ZJ4H", "onPageFinished");
+                Log.d("WebApp", "onPageFinished");
             }
 
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
-                Log.d("ZJ4H", "onPageFinished");
+                Log.d("WebApp", "onPageFinished");
             }
 
             @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
                 super.onReceivedError(view, request, error);
-                Log.d("ZJ4H", "onReceivedError");
+                Log.d("WebApp", "onReceivedError");
             }
         });
     }
 
     private void loadPage() {
-        mWebView.loadUrl("http://z4h.wtau.top:81/h5");
+        // 中交四航 http://z4h.wtau.top:81/h5
+        // 有赞vant https://youzan.github.io/vant/mobile#/zh-CN/
+        mWebView.loadUrl("https://youzan.github.io/vant/mobile#/zh-CN/");
     }
 
     private void initView() {
-        mSplash = findViewById(R.id.activity_main_splash);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                mSplash.setVisibility(View.GONE);
-            }
-        }, 2000);
+        // 启用Splash
+//        mSplash = findViewById(R.id.activity_main_splash);
+//        mSplash.setVisibility(View.VISIBLE);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                mSplash.setVisibility(View.GONE);
+//            }
+//        }, 2000);
 
         mWebView = findViewById(R.id.activity_main_webview);
         // 启用或禁用 DOM 缓存。
